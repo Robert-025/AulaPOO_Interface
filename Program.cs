@@ -23,15 +23,13 @@ namespace AulaPOO_Interface
             carrinho.Listar();
             Console.WriteLine($"\n");
             
-
             Console.ForegroundColor = ConsoleColor.Yellow;
 
             carrinho.Alterar(1, p4);
             carrinho.Listar();
             Console.WriteLine($"\n");
             
-
-             Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Red;
 
             carrinho.Deletar(p2);
             carrinho.Listar();

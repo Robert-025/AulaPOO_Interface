@@ -21,6 +21,7 @@ namespace AulaPOO_Interface.Classes
             {
                 Console.WriteLine($"Produto: {item.Nome} - Código: {item.Codigo} - Preço: {item.Preco}");
             }
+            MostarValor();
         }
 
         public void Alterar(int _codigo, Produto produto)
@@ -32,6 +33,23 @@ namespace AulaPOO_Interface.Classes
         public void Deletar(Produto produto)
         {
             carrinho.Remove(produto);
+        }
+
+        public void MostarValor()
+        {
+            if (carrinho != null)
+            {
+                ValorTotal = 0;
+
+                foreach (var item in carrinho)
+                {
+                    ValorTotal += item.Preco;
+                }
+                Console.WriteLine($"\nO valor do seu carrinho é: R${ValorTotal}");
+                
+            }else{
+                Console.WriteLine($"Seu carrinho está vazio.");
+            }
         }
     }
 }
