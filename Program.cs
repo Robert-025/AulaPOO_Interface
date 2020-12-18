@@ -21,11 +21,15 @@ namespace AulaPOO_Interface
             Console.ForegroundColor = ConsoleColor.Green;
 
             carrinho.Listar();
+            Console.WriteLine($"\n");
+            
 
             Console.ForegroundColor = ConsoleColor.Yellow;
 
             carrinho.Alterar(1, p4);
             carrinho.Listar();
+            Console.WriteLine($"\n");
+            
 
              Console.ForegroundColor = ConsoleColor.Red;
 
